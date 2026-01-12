@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="5" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="com.ibm.test.SignupPageTest">
+        <methods>
+          <include name="init"/>
+          <include name="signupPageTest"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.ibm.test.SignupPageTest -->
+      <class name="com.ibm.test.LoginTest">
+        <methods>
+          <include name="loginTest"/>
+          <include name="init"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.ibm.test.LoginTest -->
+      <class name="com.ibm.test.HomePageTest">
+        <methods>
+          <include name="navbarTest"/>
+          <include name="categoriesListTest"/>
+          <include name="tearDown"/>
+          <include name="previousButttonAndNextButtonTest"/>
+          <include name="setup"/>
+          <include name="slidingWindowTest"/>
+        </methods>
+      </class> <!-- com.ibm.test.HomePageTest -->
+      <class name="com.ibm.test.CartPageTest">
+        <methods>
+          <include name="init"/>
+          <include name="cartTest"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.ibm.test.CartPageTest -->
+      <class name="com.ibm.basetest.BaseTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.ibm.basetest.BaseTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

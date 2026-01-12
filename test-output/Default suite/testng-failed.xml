@@ -3,23 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ibm.test.SignupPageTest">
+      <class name="com.ibm.data.DataSupplier">
         <methods>
-          <include name="signupPageTest"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
+          <include name="loginData"/>
         </methods>
-      </class> <!-- com.ibm.test.SignupPageTest -->
-      <class name="com.ibm.test.HomePageTest">
-        <methods>
-          <include name="navbarTest"/>
-          <include name="categoriesListTest"/>
-          <include name="tearDown"/>
-          <include name="previousButttonAndNextButtonTest"/>
-          <include name="setup"/>
-          <include name="slidingWindowTest"/>
-        </methods>
-      </class> <!-- com.ibm.test.HomePageTest -->
+      </class> <!-- com.ibm.data.DataSupplier -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

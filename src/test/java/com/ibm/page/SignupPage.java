@@ -9,10 +9,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestListener;
 
 import com.ibm.element.AlertHandel;
 
-public class SignupPage {
+public class SignupPage implements ITestListener {
 	WebDriver driver;
 	Alert alert;
 	WebDriverWait wait;
@@ -28,22 +29,33 @@ public class SignupPage {
 	By xpathofSignupButton = By.xpath("//*[@id=\"signInModal\"]/div/div/div[3]/button[2]");
 	By xpathofCloseButton = By.xpath("//*[@id='signInModal']//button[text()='Close']");
 	
-	public void signup() throws InterruptedException {
-		driver.findElement(xpathofSinupLink).click();
+	public void signup(String userId ,String passId) throws InterruptedException {
 		
-		WebElement username =wait.until(ExpectedConditions.visibilityOfElementLocated(idofUsernameInputField));
-		new Actions(driver).sendKeys(username,"Abhijitmaiti2@gmail")
-				.perform();
+		System.out.println("SIGNUP 2");
 		
-		WebElement password = driver.findElement(xpathofPasswordInputField);
-		new Actions(driver).sendKeys(password,"Abhijit@2004")
-				.perform();
+		driver.findElement(xpathofSinupLink)
+			.click();
 	
 		
+		WebElement username =wait.until(ExpectedConditions.visibilityOfElementLocated(idofUsernameInputField));
+		username.clear();
+		new Actions(driver).sendKeys(username,userId)
+				.perform();
+		
+		
+		WebElement password = driver.findElement(xpathofPasswordInputField);
+		password.clear();
+		new Actions(driver).sendKeys(password,passId)
+				.perform();
+		
+	
 		WebElement signupButton= driver.findElement(xpathofSignupButton);
 		new Actions(driver).moveToElement(signupButton)
 				.click()
 				.perform();
+		
+		
+		Thread.sleep(1000);
 		
 		AlertHandel alertHandel =new AlertHandel(driver);
 		String message = alertHandel.alertHandel();
@@ -55,9 +67,14 @@ public class SignupPage {
 			new Actions(driver).moveToElement(closeButton)	
 				.click()
 				.perform();
+			
+			
+		}else if(message.equalsIgnoreCase("Sign up successful.")){
+			Thread.sleep(2000);
+			
 		}
-		
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("signInModal")));
+		
 	}
 
 }

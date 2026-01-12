@@ -23,7 +23,6 @@ public class AlertHandel {
 			alert = wait.until(ExpectedConditions.alertIsPresent());
 			alert = driver.switchTo().alert();
 			String result = alert.getText();
-			System.out.println(result);
 			alert.accept();
 			return result;
 			

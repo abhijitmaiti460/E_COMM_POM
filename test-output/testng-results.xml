@@ -1,75 +1,407 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="16" passed="14" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-02T02:51:00 IST" name="Suite" finished-at="2026-01-02T02:51:40 IST" duration-ms="40036">
+  <suite started-at="2026-01-09T14:58:31 IST" name="Suite" finished-at="2026-01-09T14:59:32 IST" duration-ms="61134">
     <groups>
       <group name="smoke">
-        <method signature="HomePageTest.navbarTest()[pri:0, instance:com.ibm.test.HomePageTest@10683d9d]" name="navbarTest" class="com.ibm.test.HomePageTest"/>
-        <method signature="HomePageTest.slidingWindowTest()[pri:0, instance:com.ibm.test.HomePageTest@10683d9d]" name="slidingWindowTest" class="com.ibm.test.HomePageTest"/>
-        <method signature="HomePageTest.categoriesListTest()[pri:0, instance:com.ibm.test.HomePageTest@10683d9d]" name="categoriesListTest" class="com.ibm.test.HomePageTest"/>
-        <method signature="HomePageTest.previousButttonAndNextButtonTest()[pri:0, instance:com.ibm.test.HomePageTest@10683d9d]" name="previousButttonAndNextButtonTest" class="com.ibm.test.HomePageTest"/>
+        <method signature="HomePageTest.navbarTest()[pri:0, instance:com.ibm.test.HomePageTest@2a5c8d3f]" name="navbarTest" class="com.ibm.test.HomePageTest"/>
+        <method signature="HomePageTest.slidingWindowTest(java.lang.Long)[pri:0, instance:com.ibm.test.HomePageTest@2a5c8d3f]" name="slidingWindowTest" class="com.ibm.test.HomePageTest"/>
+        <method signature="HomePageTest.categoriesListTest(java.lang.Long,java.lang.Long)[pri:0, instance:com.ibm.test.HomePageTest@2a5c8d3f]" name="categoriesListTest" class="com.ibm.test.HomePageTest"/>
+        <method signature="HomePageTest.previousButttonAndNextButtonTest(java.lang.Long)[pri:0, instance:com.ibm.test.HomePageTest@2a5c8d3f]" name="previousButttonAndNextButtonTest" class="com.ibm.test.HomePageTest"/>
       </group> <!-- smoke -->
       <group name="login">
-        <method signature="LoginTest.loginTest()[pri:0, instance:com.ibm.test.LoginTest@217ed35e]" name="loginTest" class="com.ibm.test.LoginTest"/>
+        <method signature="LoginTest.loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.ibm.test.LoginTest@1ff4931d]" name="loginTest" class="com.ibm.test.LoginTest"/>
       </group> <!-- login -->
       <group name="signup">
-        <method signature="SignupPageTest.signupPageTest()[pri:0, instance:com.ibm.test.SignupPageTest@682b2fa]" name="signupPageTest" class="com.ibm.test.SignupPageTest"/>
+        <method signature="SignupPageTest.signupPageTest(java.lang.String,java.lang.String)[pri:0, instance:com.ibm.test.SignupPageTest@710f4dc7]" name="signupPageTest" class="com.ibm.test.SignupPageTest"/>
       </group> <!-- signup -->
+      <group name="cart">
+        <method signature="CartPageTest.cartTest()[pri:0, instance:com.ibm.test.CartPageTest@65e98b1c]" name="cartTest" class="com.ibm.test.CartPageTest"/>
+      </group> <!-- cart -->
     </groups>
-    <test started-at="2026-01-02T02:51:00 IST" name="Test" finished-at="2026-01-02T02:51:40 IST" duration-ms="40036">
+    <test started-at="2026-01-09T14:58:31 IST" name="Test" finished-at="2026-01-09T14:59:32 IST" duration-ms="61134">
       <class name="com.ibm.test.SignupPageTest">
-        <test-method is-config="true" signature="init()[pri:0, instance:com.ibm.test.SignupPageTest@682b2fa]" started-at="2026-01-02T02:51:20 IST" name="init" finished-at="2026-01-02T02:51:20 IST" duration-ms="94" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.ibm.test.SignupPageTest@710f4dc7]" started-at="2026-01-09T14:58:53 IST" name="init" finished-at="2026-01-09T14:58:53 IST" duration-ms="67" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="signupPageTest()[pri:0, instance:com.ibm.test.SignupPageTest@682b2fa]" started-at="2026-01-02T02:51:20 IST" name="signupPageTest" depends-on-groups="smoke" finished-at="2026-01-02T02:51:23 IST" duration-ms="3186" status="PASS">
+        <test-method signature="signupPageTest(java.lang.String,java.lang.String)[pri:0, instance:com.ibm.test.SignupPageTest@710f4dc7]" started-at="2026-01-09T14:58:53 IST" name="signupPageTest" data-provider="signupData" depends-on-groups="smoke" finished-at="2026-01-09T14:58:57 IST" duration-ms="3716" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin4986@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@2004]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signupPageTest -->
+        <test-method signature="signupPageTest(java.lang.String,java.lang.String)[pri:0, instance:com.ibm.test.SignupPageTest@710f4dc7]" started-at="2026-01-09T14:58:57 IST" name="signupPageTest" data-provider="signupData" depends-on-groups="smoke" finished-at="2026-01-09T14:59:00 IST" duration-ms="3480" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Abhi02419@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abhijit@2004]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signupPageTest -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.ibm.test.SignupPageTest@710f4dc7]" started-at="2026-01-09T14:58:57 IST" name="init" finished-at="2026-01-09T14:58:57 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="signupPageTest(java.lang.String,java.lang.String)[pri:0, instance:com.ibm.test.SignupPageTest@710f4dc7]" started-at="2026-01-09T14:59:00 IST" name="signupPageTest" data-provider="signupData" depends-on-groups="smoke" finished-at="2026-01-09T14:59:04 IST" duration-ms="3720" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Abhi00488@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abhijitmaiti@2004]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signupPageTest -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.ibm.test.SignupPageTest@710f4dc7]" started-at="2026-01-09T14:59:00 IST" name="init" finished-at="2026-01-09T14:59:00 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.ibm.test.SignupPageTest@710f4dc7]" started-at="2026-01-09T14:59:04 IST" name="init" finished-at="2026-01-09T14:59:04 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="signupPageTest(java.lang.String,java.lang.String)[pri:0, instance:com.ibm.test.SignupPageTest@710f4dc7]" started-at="2026-01-09T14:59:04 IST" name="signupPageTest" data-provider="signupData" depends-on-groups="smoke" finished-at="2026-01-09T14:59:08 IST" duration-ms="3597" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mait32tik@gamil.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[maiti@2004]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signupPageTest -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.ibm.test.SignupPageTest@710f4dc7]" started-at="2026-01-09T14:59:08 IST" name="init" finished-at="2026-01-09T14:59:08 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="signupPageTest(java.lang.String,java.lang.String)[pri:0, instance:com.ibm.test.SignupPageTest@710f4dc7]" started-at="2026-01-09T14:59:08 IST" name="signupPageTest" data-provider="signupData" depends-on-groups="smoke" finished-at="2026-01-09T14:59:12 IST" duration-ms="3823" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sham22@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sham@2003]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signupPageTest -->
       </class> <!-- com.ibm.test.SignupPageTest -->
       <class name="com.ibm.test.CartPageTest">
-        <test-method signature="cartTest()[pri:0, instance:com.ibm.test.CartPageTest@7dcf94f8]" started-at="2026-01-02T02:51:35 IST" name="cartTest" depends-on-groups="login" finished-at="2026-01-02T02:51:40 IST" duration-ms="5235" status="PASS">
+        <test-method signature="cartTest()[pri:0, instance:com.ibm.test.CartPageTest@65e98b1c]" started-at="2026-01-09T14:59:32 IST" name="cartTest" depends-on-groups="login" finished-at="2026-01-09T14:59:32 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method CartPageTest.cartTest()[pri:0, instance:com.ibm.test.CartPageTest@65e98b1c] depends on not successfully finished methods in group "login"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method CartPageTest.cartTest()[pri:0, instance:com.ibm.test.CartPageTest@65e98b1c] depends on not successfully finished methods in group "login"
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cartTest -->
-        <test-method is-config="true" signature="init()[pri:0, instance:com.ibm.test.CartPageTest@7dcf94f8]" started-at="2026-01-02T02:51:35 IST" name="init" finished-at="2026-01-02T02:51:35 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
       </class> <!-- com.ibm.test.CartPageTest -->
       <class name="com.ibm.test.LoginTest">
-        <test-method is-config="true" signature="init()[pri:0, instance:com.ibm.test.LoginTest@217ed35e]" started-at="2026-01-02T02:51:23 IST" name="init" finished-at="2026-01-02T02:51:23 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:com.ibm.test.LoginTest@1ff4931d]" started-at="2026-01-09T14:59:12 IST" name="init" finished-at="2026-01-09T14:59:12 IST" duration-ms="51" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="loginTest()[pri:0, instance:com.ibm.test.LoginTest@217ed35e]" started-at="2026-01-02T02:51:23 IST" name="loginTest" depends-on-groups="signup" finished-at="2026-01-02T02:51:35 IST" duration-ms="12106" status="PASS">
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.ibm.test.LoginTest@1ff4931d]" started-at="2026-01-09T14:59:12 IST" name="loginTest" data-provider="loginData" depends-on-groups="signup" finished-at="2026-01-09T14:59:15 IST" duration-ms="3476" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@2004]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.ibm.test.LoginTest@1ff4931d]" started-at="2026-01-09T14:59:15 IST" name="loginTest" data-provider="loginData" depends-on-groups="signup" finished-at="2026-01-09T14:59:19 IST" duration-ms="3724" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Abhijitmaiti0966@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abhijit@2004]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.ibm.test.LoginTest@1ff4931d]" started-at="2026-01-09T14:59:15 IST" name="init" finished-at="2026-01-09T14:59:15 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.ibm.test.LoginTest@1ff4931d]" started-at="2026-01-09T14:59:19 IST" name="init" finished-at="2026-01-09T14:59:19 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.ibm.test.LoginTest@1ff4931d]" started-at="2026-01-09T14:59:19 IST" name="loginTest" data-provider="loginData" depends-on-groups="signup" finished-at="2026-01-09T14:59:23 IST" duration-ms="3732" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Abhijitmaiti098@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Abhijitmaiti@2004]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.ibm.test.LoginTest@1ff4931d]" started-at="2026-01-09T14:59:23 IST" name="loginTest" data-provider="loginData" depends-on-groups="signup" finished-at="2026-01-09T14:59:27 IST" duration-ms="4470" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[maiti@gamil.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[maiti@2004]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.ibm.test.LoginTest@1ff4931d]" started-at="2026-01-09T14:59:23 IST" name="init" finished-at="2026-01-09T14:59:23 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.ibm.test.LoginTest@1ff4931d]" started-at="2026-01-09T14:59:27 IST" name="init" finished-at="2026-01-09T14:59:27 IST" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.ibm.test.LoginTest@1ff4931d]" started-at="2026-01-09T14:59:27 IST" name="loginTest" data-provider="loginData" depends-on-groups="signup" finished-at="2026-01-09T14:59:27 IST" duration-ms="47" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sham2@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sham@2003]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[Element <a id="login2" class="nav-link" href="#"> is not clickable at point (1018,37) because another element <div class="modal-backdrop fade"> obscures it
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [f41ffcfc-c751-4b1e-a917-5714359582e1, clickElement {id=b0f57187-07ca-48cf-b758-7f97366bb44e}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 24740, moz:profile: C:\Users\ABHIJI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (f41ffcfc-c751-4b1e-a917-5714359582e1)] -> xpath: //*[@id="login2"]]
+Session ID: f41ffcfc-c751-4b1e-a917-5714359582e1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: Element <a id="login2" class="nav-link" href="#"> is not clickable at point (1018,37) because another element <div class="modal-backdrop fade"> obscures it
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [f41ffcfc-c751-4b1e-a917-5714359582e1, clickElement {id=b0f57187-07ca-48cf-b758-7f97366bb44e}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 146.0.1, moz:accessibilityChecks: false, moz:buildID: 20251217121356, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 24740, moz:profile: C:\Users\ABHIJI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (f41ffcfc-c751-4b1e-a917-5714359582e1)] -> xpath: //*[@id="login2"]]
+Session ID: f41ffcfc-c751-4b1e-a917-5714359582e1
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at com.ibm.page.LoginPage.loginPage(LoginPage.java:36)
+at com.ibm.test.LoginTest.loginTest(LoginTest.java:25)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.ibm.test.LoginTest@1ff4931d]" started-at="2026-01-09T14:59:28 IST" name="loginTest" data-provider="loginData" depends-on-groups="signup" finished-at="2026-01-09T14:59:32 IST" duration-ms="4083" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sham22@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sham@2003]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="init()[pri:0, instance:com.ibm.test.LoginTest@1ff4931d]" started-at="2026-01-09T14:59:28 IST" name="init" finished-at="2026-01-09T14:59:28 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
       </class> <!-- com.ibm.test.LoginTest -->
       <class name="com.ibm.test.HomePageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.ibm.test.HomePageTest@10683d9d]" started-at="2026-01-02T02:50:50 IST" name="setup" finished-at="2026-01-02T02:51:00 IST" duration-ms="10016" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:com.ibm.test.HomePageTest@2a5c8d3f]" started-at="2026-01-09T14:58:21 IST" name="setup" finished-at="2026-01-09T14:58:31 IST" duration-ms="9352" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.demoblaze.com/index.html]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="navbarTest()[pri:0, instance:com.ibm.test.HomePageTest@10683d9d]" started-at="2026-01-02T02:51:00 IST" name="navbarTest" finished-at="2026-01-02T02:51:02 IST" duration-ms="1468" status="PASS">
+        <test-method signature="navbarTest()[pri:0, instance:com.ibm.test.HomePageTest@2a5c8d3f]" started-at="2026-01-09T14:58:31 IST" name="navbarTest" finished-at="2026-01-09T14:58:33 IST" duration-ms="1944" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navbarTest -->
-        <test-method signature="slidingWindowTest()[pri:0, instance:com.ibm.test.HomePageTest@10683d9d]" started-at="2026-01-02T02:51:02 IST" name="slidingWindowTest" finished-at="2026-01-02T02:51:07 IST" depends-on-methods="com.ibm.test.HomePageTest.navbarTest" duration-ms="4740" status="PASS">
+        <test-method signature="slidingWindowTest(java.lang.Long)[pri:0, instance:com.ibm.test.HomePageTest@2a5c8d3f]" started-at="2026-01-09T14:58:33 IST" name="slidingWindowTest" finished-at="2026-01-09T14:58:37 IST" depends-on-methods="com.ibm.test.HomePageTest.navbarTest" duration-ms="4826" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- slidingWindowTest -->
-        <test-method signature="categoriesListTest()[pri:0, instance:com.ibm.test.HomePageTest@10683d9d]" started-at="2026-01-02T02:51:07 IST" name="categoriesListTest" finished-at="2026-01-02T02:51:17 IST" depends-on-methods="com.ibm.test.HomePageTest.slidingWindowTest" duration-ms="10558" status="PASS">
+        <test-method signature="categoriesListTest(java.lang.Long,java.lang.Long)[pri:0, instance:com.ibm.test.HomePageTest@2a5c8d3f]" started-at="2026-01-09T14:58:37 IST" name="categoriesListTest" finished-at="2026-01-09T14:58:48 IST" depends-on-methods="com.ibm.test.HomePageTest.slidingWindowTest" duration-ms="10758" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[500]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- categoriesListTest -->
-        <test-method signature="previousButttonAndNextButtonTest()[pri:0, instance:com.ibm.test.HomePageTest@10683d9d]" started-at="2026-01-02T02:51:17 IST" name="previousButttonAndNextButtonTest" finished-at="2026-01-02T02:51:20 IST" depends-on-methods="com.ibm.test.HomePageTest.categoriesListTest" duration-ms="2437" status="PASS">
+        <test-method signature="previousButttonAndNextButtonTest(java.lang.Long)[pri:0, instance:com.ibm.test.HomePageTest@2a5c8d3f]" started-at="2026-01-09T14:58:48 IST" name="previousButttonAndNextButtonTest" finished-at="2026-01-09T14:58:51 IST" depends-on-methods="com.ibm.test.HomePageTest.categoriesListTest" duration-ms="2505" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- previousButttonAndNextButtonTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ibm.test.HomePageTest@10683d9d]" started-at="2026-01-02T02:51:40 IST" name="tearDown" finished-at="2026-01-02T02:51:43 IST" duration-ms="2799" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ibm.test.HomePageTest@2a5c8d3f]" started-at="2026-01-09T14:59:32 IST" name="tearDown" finished-at="2026-01-09T14:59:34 IST" duration-ms="2469" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

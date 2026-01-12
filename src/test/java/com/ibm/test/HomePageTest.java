@@ -1,11 +1,17 @@
 package com.ibm.test;
 
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.ibm.basetest.BaseTest;
+import com.ibm.element.MyListener;
 import com.ibm.page.HomePage;
 
+
+@Listeners(MyListener.class)
 public class HomePageTest extends BaseTest {
+	
 	
 	@Test(groups = "smoke")
 	public void navbarTest() {
@@ -13,23 +19,25 @@ public class HomePageTest extends BaseTest {
 		 new HomePage(driver).HoverOverNavBar();
 	}
 	
+	@Parameters("firstSleepTime")
 	@Test(dependsOnMethods = "navbarTest", groups="smoke")
-	public void slidingWindowTest() throws InterruptedException {
-		 new HomePage(driver).slideRightButton();
-		 new HomePage(driver).slideLeftButton();
+	public void slidingWindowTest(Long firstSleepTime) throws InterruptedException {
+		 new HomePage(driver).slideRightButton(firstSleepTime);
+		 new HomePage(driver).slideLeftButton(firstSleepTime);
 	}
 	
+	@Parameters({"firstSleepTime","secondSleepTime"})
 	@Test(dependsOnMethods = "slidingWindowTest", groups="smoke")
-	public void categoriesListTest() throws InterruptedException {
+	public void categoriesListTest(Long firstSleepTime, Long secondSleepTime) throws InterruptedException {
 		Thread.sleep(1000);
-		 new HomePage(driver).categoriesList();
+		 new HomePage(driver).categoriesList(firstSleepTime,secondSleepTime);
 	}
 	
-
+	@Parameters({"firstSleepTime"})
 	@Test(dependsOnMethods = "categoriesListTest", groups="smoke")
-	public void previousButttonAndNextButtonTest() throws InterruptedException {
-		 new HomePage(driver).previousButton();
-		 new HomePage(driver).nextButton();
+	public void previousButttonAndNextButtonTest(Long firstSleepTime) throws InterruptedException {
+		 new HomePage(driver).previousButton(firstSleepTime);
+		 new HomePage(driver).nextButton(firstSleepTime);
 	}
 	
 	

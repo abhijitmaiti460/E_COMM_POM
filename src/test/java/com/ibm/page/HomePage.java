@@ -46,48 +46,48 @@ public class HomePage {
 		hoverover.hoverOver(list, driver);
 	}
 	
-	public void slideRightButton() throws InterruptedException {
+	public void slideRightButton(Long firstSleepTime) throws InterruptedException {
 		int count =0;
 		while(count<2) {
 			WebElement rightButton = driver.findElement(xpathofRightSlideButton);
 			new Actions(driver).moveToElement(rightButton)
 			.click()
 			.perform();
-			Thread.sleep(1000);
+			Thread.sleep(firstSleepTime);
 			count++;
 		}
 	}
 	
-	public void slideLeftButton() throws InterruptedException {
+	public void slideLeftButton(Long firstSleepTime) throws InterruptedException {
 		int count=0;
 		while(count<2) {
 			WebElement leftButton = driver.findElement(xpathofLeftSlideButton);
 			new Actions(driver).moveToElement(leftButton)
 			.click()
 			.perform();
-			Thread.sleep(1000);
+			Thread.sleep(firstSleepTime);
 			count++;
 		}
 	}
-	public void categoriesList() throws InterruptedException {
+	public void categoriesList(Long firstSleepTime, Long secondSleepTime) throws InterruptedException {
 		List<WebElement> list = driver.findElements(xpathofCategories);
 		for(WebElement e : list) {
 			new Actions(driver).moveToElement(e).click()
-				.perform();
+			.perform();
 			System.out.println(e.getText());
-			Thread.sleep(1000);		
+			Thread.sleep(firstSleepTime);		
 		}
 		new Actions(driver).moveToElement(list.get(0)).click()
 		.perform();
-		Thread.sleep(1000);	
-		inventoryList();
+		Thread.sleep(firstSleepTime);	
+		inventoryList(secondSleepTime);
 		
 	}
 	
-	public void inventoryList() throws InterruptedException {
+	public void inventoryList(Long secondSleepTime) throws InterruptedException {
 		int count =0;
-		List<WebElement> list = driver.findElements(xpathofInventoryItem);
-		for(WebElement e : list) {
+		List<WebElement> listofItem = driver.findElements(xpathofInventoryItem);
+		for(WebElement e : listofItem) {
 			new Actions(driver).moveToElement(e)
 				.perform();
 			if(count==2) {
@@ -97,24 +97,24 @@ public class HomePage {
 				js.executeScript("window.scrollBy(0,500)");
 			}
 			count++;
-			Thread.sleep(500);		
+			Thread.sleep(secondSleepTime);		
 		}
 	}
 	
-	public void previousButton() throws InterruptedException {
+	public void previousButton(Long firstSleepTime) throws InterruptedException {
 		js.executeScript("window.scrollBy(0,500)");
 		WebElement previousButton = driver.findElement(xpathofPreviousButton);
 		new Actions(driver).moveToElement(previousButton)
 				.click()
 				.perform();
-		Thread.sleep(1000);
+		Thread.sleep(firstSleepTime);
 	}
-	public void nextButton() throws InterruptedException {
+	public void nextButton(Long firstSleepTime) throws InterruptedException {
 		WebElement previousButton = driver.findElement(xpathofNextButton);
 		new Actions(driver).moveToElement(previousButton)
 				.click()
 				.perform();
-		Thread.sleep(1000);
+		Thread.sleep(firstSleepTime);
 	}
 
 }
